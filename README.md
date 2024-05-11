@@ -1,4 +1,4 @@
-<h1 align="center"><img src="https://assets.infyom.com/open-source/infyom-logo.png" alt="InfyOm"></h1>
+<h1 align="center"><img src="https://eagleminds.net/wp-content/uploads/2023/04/eagleminds-logo-final-copy-1.png" alt="Eagleminds Technologies Pvt Ltd"></h1>
 
 # Laravel Boilerplate for AdminLTE Theme
 
