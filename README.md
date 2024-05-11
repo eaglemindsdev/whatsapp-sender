@@ -11,6 +11,11 @@ WhatsApp message send with [WhatsApp-Sender](https://sender.track-new.com/) This
 
 ## Installation
 
+You can install this library via Composer. Run the following command in your terminal:
+
+composer require yourvendor/whatsapp-message-sender
+
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
