@@ -4,10 +4,10 @@
 
 WhatsApp message send with [WhatsApp-Sender](https://sender.track-new.com/) This library provides a simple and efficient way to send WhatsApp messages programmatically using PHP. It is designed to work seamlessly with Laravel and can be easily integrated into your projects using Composer.
 
-Features
-Send Messages: Send text, images, videos, documents, and other media via WhatsApp.
-Laravel Integration: Built with Laravel developers in mind for smooth integration.
-Composer Support: Easily install and manage dependencies using Composer.
+## Features
+- Send Messages: Send text, images, videos, documents, and other media via WhatsApp.
+- Laravel Integration: Built with Laravel developers in mind for smooth integration.
+- Composer Support: Easily install and manage dependencies using Composer.
 
 ## Documentation
 
