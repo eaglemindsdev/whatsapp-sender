@@ -12,9 +12,48 @@ WhatsApp message send with [WhatsApp-Sender](https://sender.track-new.com/) This
 ## Installation
 
 You can install this library via Composer. Run the following command in your terminal:
-
+```sh
 composer require yourvendor/whatsapp-message-sender
+```
 
+## Usage
+### Initialize the Library
+First, you need to initialize the WhatsApp message sender with your credentials:
+```sh
+use eagleminds\whatsapp-sender;
+$sender = new WhatsAppMessageSender('your_api_key', 'your_api_secret');
+```
+### Send a Message
+You can then use the sendMessage method to send a message to a WhatsApp recipient:
+```sh
+$recipient = 'whatsapp_number';
+$message = 'Hello, this is a test message!';
+$response = $sender->sendMessage($recipient, $message);
+```
+### Send Media
+To send media such as images, videos, or documents, use the sendMediaMessage method:
+```sh
+$mediaUrl = 'https://example.com/image.jpg';
+$caption = 'Check out this image!';
+$response = $sender->sendMediaMessage($recipient, $mediaUrl, $caption);
+```
+## Examples
+Here are some examples to help you get started:
+
+### Sending a Text Message
+```sh
+$response = $sender->sendMessage('whatsapp_number', 'Hello, World!');
+```
+### Sending an Image
+```sh
+$mediaUrl = 'https://example.com/image.jpg';
+$caption = 'Check out this image!';
+$response = $sender->sendMediaMessage('whatsapp_number', $mediaUrl, $caption);
+```
+## Requirements
+ - PHP 7.0 or higher
+ - Laravel 5.5 or higher (if using with Laravel)
+ 
 
 ## License
 
