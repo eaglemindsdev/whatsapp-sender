@@ -1,8 +1,8 @@
 <h1 align="center"><img src="https://eagleminds.net/wp-content/uploads/2023/04/eagleminds-logo-final-copy-1.png" alt="Eagleminds Technologies Pvt Ltd"></h1>
 
-# Laravel Boilerplate for AdminLTE Theme
+# WhatsApp Message Sender API Library for PHP
 
-Laravel Boilerplate with [AdminLTE](https://adminlte.io/) Theme with [InfyOm Laravel Generator](https://github.com/InfyOmLabs/laravel-generator).
+WhatsApp message send with [WhatsApp-Sender](https://sender.track-new.com/) Theme with [InfyOm Laravel Generator](https://github.com/InfyOmLabs/laravel-generator).
 Following things are ready to be used directly with AdminLTE Theme.
 
 - Signup
