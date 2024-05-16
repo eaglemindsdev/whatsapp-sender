@@ -20,15 +20,25 @@ composer require eagleminds/whatsapp-sender
 ### Initialize the Library
 First, you need to initialize the WhatsApp message sender with your credentials:
 ```sh
-use eagleminds\whatsapp-sender;
-$sender = new WhatsAppMessageSender('your_api_key', 'your_api_secret');
+use Eagleminds\WhatsappSender\WhatsAppSender;
 ```
 ### Send a Message
 You can then use the sendMessage method to send a message to a WhatsApp recipient:
 ```sh
-$recipient = 'whatsapp_number';
-$message = 'Hello, this is a test message!';
-$response = $sender->sendMessage($recipient, $message);
+ public function sendMessage(Request $request)
+    {
+        // Get mobile number and message from request
+        $mobileNumber = $request->input('mobile_number');
+        $message = $request->input('message');
+
+        // Send WhatsApp message
+        try {
+            $response = $this->whatsappSender->sendWhatsAppMessage($mobileNumber, $message);
+            return response()->json(['success' => true, 'message' => 'WhatsApp message sent successfully', 'response' => $response]);
+        } catch (\Exception $e) {
+            return response()->json(['success' => false, 'message' => 'Failed to send WhatsApp message', 'error' => $e->getMessage()], 500);
+        }
+    }
 ```
 ### Send Media
 To send media such as images, videos, or documents, use the sendMediaMessage method:
