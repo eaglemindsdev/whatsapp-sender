@@ -14,5 +14,22 @@
             "email": "eaglemindsdev@gmail.com"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Eagleminds\\WhatsappSender\\WhatsAppServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php artisan vendor:publish --tag=config",
+            "php vendor/eagleminds/whatsapp-sender/whatsapp-config.php"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=config",
+            "php vendor/eagleminds/whatsapp-sender/whatsapp-config.php"
+        ]
+    },
     "require": {}
 }
