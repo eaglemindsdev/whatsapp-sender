@@ -22,7 +22,11 @@ if (file_exists($envFilePath)) {
         'country_code' => '+91'
     ];
 
-    file_put_contents($configFilePath, '<?php return ' . var_export($config, true) . ';');
+    $configFilePath = __DIR__ . '/whatsapp-config.php';
+    $configContent = "<?php\n\nreturn " . var_export($config, true) . ";\n";
+    
+    // Save the config to the file
+    file_put_contents($configFilePath, $configContent);
 
     echo "Config file created successfully.\n";
 } else {
