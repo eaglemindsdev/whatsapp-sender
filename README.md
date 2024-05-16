@@ -13,7 +13,7 @@ WhatsApp message send with [WhatsApp-Sender](https://sender.track-new.com/) This
 
 You can install this library via Composer. Run the following command in your terminal:
 ```sh
-composer require yourvendor/whatsapp-message-sender
+composer require eagleminds/whatsapp-sender
 ```
 
 ## Usage
