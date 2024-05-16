@@ -10,9 +10,15 @@ class WhatsAppServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        // Bind the SendMessage class as a singleton
-        $this->app->singleton('whatsappSender', function ($app) {
-            return new SendMessage();
+                $this->app->bind(WhatsAppSender::class, function ($app) {
+            // Retrieve configuration values from your Laravel configuration
+            $apiUrl = config('whatsapp.api_url');
+            $apiKey = config('whatsapp.api_key');
+            $authKey = config('whatsapp.auth_key');
+            $templateId = config('whatsapp.template_id');
+            $countryCode = config('whatsapp.country_code');
+
+            return new WhatsAppSender($apiUrl, $apiKey, $authKey, $templateId, $countryCode);
         });
     }
 
