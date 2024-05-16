@@ -26,7 +26,7 @@ class WhatsAppServiceProvider extends ServiceProvider
     {
         // Publish configuration file during installation
         $this->publishes([
-            __DIR__ . '/../config/whatsapp-config.php' => config_path('whatsapp-config.php'),
-        ], 'config');
+            __DIR__ . '/../whatsapp-config.php' => config_path('whatsapp-config.php'),
+        ], 'whatsapp-config');
     }
 }
