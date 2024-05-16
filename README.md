@@ -37,6 +37,35 @@ $mediaUrl = 'https://example.com/image.jpg';
 $caption = 'Check out this image!';
 $response = $sender->sendMediaMessage($recipient, $mediaUrl, $caption);
 ```
+## WhatsApp Sender Platform Documentation
+This repository contains documentation for integrating with the WhatsApp Sender Platform provided by Track New. This platform allows you to send WhatsApp messages programmatically using APIs. Below are the steps to register, login, and obtain the necessary keys and template IDs for integration.
+
+### Registering and Logging In
+To use the WhatsApp Sender Platform, you need to register on the [WhatsApp-Sender](https://sender.track-new.com/) website.
+
+### Registration Steps
+ - Visit the [WhatsApp-Sender](https://sender.track-new.com/) website.
+ - Click on the "Sign Up" or "Register" button.
+ - Fill out the registration form with your details, including email address and password.
+- Submit the form to create your account.
+### Logging In
+ - Go to the [WhatsApp-Sender](https://sender.track-new.com/)r website.
+ - Click on the "Login" button.
+ - Enter your registered email address and password.
+ - Click on "Login" to access your account dashboard.
+## Obtaining API Key and Template ID
+  After logging in, you will need to obtain the necessary API key (app_key), authentication key (auth_key), and template ID for integrating with the WhatsApp Sender Platform.
+
+ ### Getting API Key (app_key) and Authentication Key (auth_key)
+ - Once logged in, navigate to your account settings or dashboard.
+ - Look for an option like "API Keys" or "Integration Settings".
+ - Generate or find your API key (app_key) and authentication key (auth_key).
+ - Note down these keys as they will be required for API authentication.
+ ## Obtaining Template ID
+- In your account dashboard, find the section related to message templates or templates management.
+ - Create a new template if required or select an existing template.
+ - Note down the template ID associated with the template you wish to use for sending messages.
+   
 ## Examples
 Here are some examples to help you get started:
 
