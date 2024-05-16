@@ -1,6 +1,6 @@
 {
     "name": "eagleminds/whatsapp-sender",
-    "description": "A basic package for send whatsapp message through api",
+    "description": "A basic package for sending WhatsApp messages through API",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -23,13 +23,11 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "@php artisan vendor:publish --tag=config",
-            "php vendor/eagleminds/whatsapp-sender/whatsapp-config.php"
+            "@php artisan vendor:publish --tag=whatsapp-config"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=config",
-            "php vendor/eagleminds/whatsapp-sender/whatsapp-config.php"
+            "@php artisan vendor:publish --tag=whatsapp-config"
         ]
-    },
+    },    
     "require": {}
 }
