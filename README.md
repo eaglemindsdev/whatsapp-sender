@@ -76,6 +76,7 @@ To use the WhatsApp Sender Platform, you need to register on the [WhatsApp-Sende
  - Note down these keys as they will be required for API authentication.
  ## Obtaining Template ID
 - In your account dashboard, find the section related to message templates or templates management.
+  <img src="https://github.com/eaglemindsdev/track-new-privacy-policy/blob/main/img/template_create.png" alt="template_create">
  - Create a new template if required or select an existing template.
    <img src="https://github.com/eaglemindsdev/track-new-privacy-policy/blob/main/img/template_id.png" alt="template_id">
  - Note down the template ID associated with the template you wish to use for sending messages.
