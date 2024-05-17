@@ -8,10 +8,7 @@ use Illuminate\Support\ServiceProvider;
 
 class WhatsAppServiceProvider extends ServiceProvider
 {
-    public function register()
-    {
-        $this->mergeConfigFrom(__DIR__ . '/whatsapp-config.php', 'whatsapp');
-    }
+   
 
     public function boot()
     {

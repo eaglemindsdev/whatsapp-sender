@@ -1,34 +1,53 @@
 <?php
-// generate-config.php
-
 // Path to the .env file
 $envFilePath = base_path('.env');
 
-// Load environment variables from .env file
+// Check if the .env file exists
 if (file_exists($envFilePath)) {
-    $envConfig = parse_ini_file($envFilePath);
-    $site_url = $envConfig['WHATSAPP_SITE_URL'] ?? null;
-    $whatsappApiKey = $envConfig['WHATSAPP_API_KEY'] ?? null;
-    $authKey = $envConfig['AUTH_KEY'] ?? null;
-    $templateId = $envConfig['TEMPLATE_ID'] ?? null;
+    // Read the contents of the .env file
+    $lines = file($envFilePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
-    // Write config array to config file
-    $configFilePath = __DIR__ . '/whatsapp-config.php';
+    // Skip the first three lines of the .env file
+    $envConfig = array_slice($lines, 3);
+
+    // Parse the remaining lines as an INI file
+    $envConfig = parse_ini_string(implode("\n", $envConfig));
+
+    // Proceed with configuration generation as before
+   
+
+    // Format the config array
     $config = [
-        'site_url' => $site_url,
-        'whatsapp_api_key' => $whatsappApiKey,
-        'auth_key' => $authKey,
-        'template_id' => $templateId,
+        'site_url' => env('WHATSAPP_SITE_URL'),
+        'whatsapp_app_key' => `env('WHATSAPP_APP_KEY')`,
+        'auth_key' => `env('AUTH_KEY')`,        
         'country_code' => '+91'
     ];
 
-    $configFilePath = __DIR__ . '/whatsapp-config.php';
+    // Generate content for whatsapp-config.php
     $configContent = "<?php\n\nreturn " . var_export($config, true) . ";\n";
-    
-    // Save the config to the file
+
+    // Path to the whatsapp-config.php file
+    $configFilePath = config_path('whatsapp-config.php');
+
+    // Write the config content to the file
     file_put_contents($configFilePath, $configContent);
 
     echo "Config file created successfully.\n";
+
+    // Define the new values to update or add
+    $newEnvValues = [
+        'WHATSAPP_SITE_URL' => '',
+        'WHATSAPP_APP_KEY' => '',
+        'AUTH_KEY' => ''       
+    ];
+
+    foreach ($newEnvValues as $key => $value) {
+        // Append the new key-value pairs to the .env file
+        file_put_contents($envFilePath, "\n{$key}={$value}", FILE_APPEND);
+    }
+
+    echo "Environment variables updated successfully.\n";
 } else {
     echo "Error: .env file not found. Please ensure the .env file exists.\n";
 }

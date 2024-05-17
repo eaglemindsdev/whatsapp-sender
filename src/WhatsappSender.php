@@ -10,13 +10,23 @@ class WhatsAppSender
     protected $templateId;
     protected $countryCode;
 
-    public function __construct($apiUrl, $apiKey, $authKey, $templateId, $countryCode)
+    public function __construct($templateId)
     {
-        $this->apiUrl = $apiUrl;
-        $this->apiKey = $apiKey;
-        $this->authKey = $authKey;
+
         $this->templateId = $templateId;
-        $this->countryCode = $countryCode;
+        $this->loadConfig();
+    }
+
+    private function loadConfig()
+    {
+        $configFilePath = config_path('whatsapp-config.php');
+        $config = file_exists($configFilePath) ? require $configFilePath : [];
+
+        $this->apiUrl = $config['site_url'] ?? null;
+        $this->appKey = $config['appKey'] ?? null;
+        $this->authKey = $config['authKey'] ?? null;
+       
+        $this->countryCode = $config['countryCode'] ?? null;
     }
 
     public function sendWhatsAppMessage($to, $message)
@@ -43,7 +53,7 @@ class WhatsAppSender
         // $templateId = $result->template_id;
         
       
-        $url = ENV('URL');
+        $url = $config['site_url'];
 
 
         $postFields = array(
