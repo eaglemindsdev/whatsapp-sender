@@ -69,7 +69,7 @@ To use the WhatsApp Sender Platform, you need to register on the [WhatsApp-Sende
  ### Getting API Key (app_key) and Authentication Key (auth_key)
  - Once logged in, navigate to your account settings or dashboard.
  - Look for an option like "My Apps" then click app "Integration Settings".
- <img src=" https://github.com/eaglemindsdev/track-new-privacy-policy/blob/main/img/app_key.png" alt="app_key">
+ <img src="https://github.com/eaglemindsdev/track-new-privacy-policy/blob/main/img/app_key.png" alt="app_key">
 
  - Generate or find your API key (app_key) and authentication key (auth_key).
  - Note down these keys as they will be required for API authentication.
