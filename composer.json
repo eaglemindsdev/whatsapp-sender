@@ -3,6 +3,28 @@
     "description": "A basic package for sending WhatsApp messages through API",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+    "WhatsApp",
+    "API",
+    "PHP",
+    "Laravel",
+    "messaging",
+    "WhatsAppSender",
+    "chatAPI",
+    "composer",
+    "integration",
+    "library",
+    "framework",
+    "SMS",
+    "notification",
+    "automation",
+    "webhook",
+    "REST",
+    "communication",
+    "texting",
+    "sdk",
+    "gateway"
+    ],
     "autoload": {
         "psr-4": {
             "Eagleminds\\WhatsappSender\\": "src/"
