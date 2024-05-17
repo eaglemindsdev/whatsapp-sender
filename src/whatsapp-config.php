@@ -2,7 +2,7 @@
 // generate-config.php
 
 // Path to the .env file
-$envFilePath = __DIR__ . '/../../.env';
+$envFilePath = base_path('.env');
 
 // Load environment variables from .env file
 if (file_exists($envFilePath)) {
